@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Gisele e Felipe</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  </head>
+
+  <body>
+    <header>
+      <div class="header-container">
+        
+      </div>
+      <div class="links links-left">
+        <ul>
+          <a href="#"><li>HOME</li></a>
+          <a href="#"><li>FOTOS</li></a>
+        </ul>
+      </div>
+      <div class="logo" id="logo-header">
+        
+      </div>
+      <div class="links links-right">
+        <ul>
+          <a href="https://www.querodecasamento.com.br/lista-de-casamento/giselefelipe/"><li>LISTA DE PRESENTES</li></a>
+          <a href="#"><li></li></a>
+        </ul>
+      </div>
+    </header>
+    <% flash.each do |name, msg| %>
+      <div class="notices">
+       <p><%= msg %></p> 
+      </div>
+    <% end %>
+
+    <div class="banner banner1">
+      
+    </div>
+
+    <%= yield %>
+  </body>
+</html>

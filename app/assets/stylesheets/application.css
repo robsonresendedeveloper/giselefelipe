@@ -1,0 +1,104 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ /*
+	cores:
+		#DDE8B9
+		#E8D2AE
+		#D7B29D
+		#CB8589
+		#796465
+
+	 */	
+
+*, body {
+	margin: 0;
+	padding: 0;
+}
+
+@media only screen and (min-width: 992px) {
+	 header {
+	 	width: 100%;
+	 	height: 100px;
+	 	position: relative;
+	 	float: left;
+	 	z-index: 2;
+	 }
+	 header .header-container {
+	 	width: 100%;
+	 	height: 100%;
+	 	background-color: #CB8589;
+	 	opacity: .7;
+	 }
+
+	 header .links {
+	 	position: relative;
+	 	margin-top: -56px;
+	 }
+
+	 header .links a{
+	 	color: #DDE8B9;
+	 	font-family: helvetica;
+	 	text-decoration: none;
+	 	font-size: 22px;
+	 	text-shadow: 1px 1px #796465;
+	 	transition: .5s;
+	 }
+
+	 header .links a:hover {
+	 	background: none;
+	 	color: #796465;
+	 }
+
+	 header .links-left {
+	 	float: left;
+	 }
+
+	 header .links-left li {
+	 	margin-left: 10px;
+	 }
+
+	 header .links-right {
+	 	float: right;
+	 }
+
+	 header .links-right li{
+	 	margin-right: 10px;
+	 }
+	 header li {
+	 	display: inline;
+	 }
+
+	 .banner {
+	 	width: 100%;
+		height: 750px;
+		position: relative;
+		float: left;
+		background-size: 100% 100%;
+		margin-top: -100px;
+	 }
+	 .banner1 {
+	 	background-image: url("foto16.png");
+	 }
+}
+
+
+
+
+
+
+
+

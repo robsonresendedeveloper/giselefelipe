@@ -1,0 +1,16 @@
+<div class="login">
+
+	<h1>Área dos noivos</h1>
+
+	<div class="form-login">
+		<%= form_for(:session, url: login_path) do |f| %>
+			<label>Username:</label><br>
+			<%= f.text_field :name %>
+
+			<label>Senha:</label> 
+			<%= f.password_field :password, autocomplete: "off" %>
+
+			<%= f.submit "Entrar", id: "btn-login" %>	
+		<% end %>
+	</div>
+</div>
