@@ -18,9 +18,9 @@
       </div>
       <div class="links links-left">
         <ul>
-          <%= link_to new_confirmation_path(anchor: 'PHOTOS') do %><li>FOTOS</li><% end %>
-          <%= link_to new_confirmation_path(anchor: 'INFORMATIONS') do %><li>INFORMAÇÕES</li><% end %>
-          <%= link_to new_confirmation_path(anchor: 'CONFIRMATION') do %><li>CONFIRME SUA PRESENÇA</li><% end %>
+          <a href="" class="photo-link"><li>FOTOS</li></a>
+          <a href="" class="infos-link"><li>INFORMAÇÕES</li></a>
+          <a href="" class="confirmation-link"><li>CONFIRME SUA PRESENÇA</li></a>
 
         </ul>
       </div>
@@ -65,9 +65,9 @@
             <div class=" footer-section col-md-4">
               <h2>Links:</h2>
               <ul>
-                <%= link_to root_path do %><li>FOTOS</li><% end %>
-                <a href="#"><li>INFORMAÇÕES</li></a>
-                <a href="#"><li>CONFIRME SUA PRESENÇA</li></a>
+                <a href="" class="photo-link"><li>FOTOS</li></a>
+                <a href="" class="infos-link"><li>INFORMAÇÕES</li></a>
+                <a href="" class="confirmation-link"><li>CONFIRME SUA PRESENÇA</li></a>
                 <a href="https://www.querodecasamento.com.br/lista-de-casamento/giselefelipe/"><li>LISTA DE PRESENTES</li></a>
                 <% if logged_in? %>
                   <%= link_to confirmations_path do %><li>ÁREA DOS NOIVOS</li><% end %>
