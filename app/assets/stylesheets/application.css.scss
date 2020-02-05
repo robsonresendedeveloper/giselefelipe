@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require_self
+ *= require font_awesome5_webfont
  */
 
  /*
@@ -24,6 +25,17 @@
 
 	 */	
 
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script|Jim+Nightshade|Open+Sans+Condensed:300|Poppins&display=swap');
+
+$back-color: #796465;
+$font-color: #E8D2AE;
+$shadow-color: #000;
+$header-color: #CB8589;
+$font-links: 'Open Sans Condensed', sans-serif;
+$font-logo: 'Dancing Script', cursive;
+
 *, body {
 	margin: 0;
 	padding: 0;
@@ -33,14 +45,14 @@
 	 header {
 	 	width: 100%;
 	 	height: 100px;
-	 	position: relative;
+	 	position: fixed;
 	 	float: left;
 	 	z-index: 2;
 	 }
 	 header .header-container {
 	 	width: 100%;
 	 	height: 100%;
-	 	background-color: #CB8589;
+	 	background-color: $header-color;
 	 	opacity: .8;
 	 }
 
@@ -51,7 +63,7 @@
 
 	 header .links a{
 	 	color: #DDE8B9;
-	 	font-family: helvetica;
+	 	font-family: $font-links;
 	 	text-decoration: none;
 	 	font-size: 22px;
 	 	text-shadow: 1px 1px #796465;
@@ -68,7 +80,7 @@
 	 }
 
 	 header .links-left li {
-	 	margin-left: 10px;
+	 	margin-left: 40px;
 	 }
 
 	 header .links-right {
@@ -76,7 +88,7 @@
 	 }
 
 	 header .links-right li{
-	 	margin-right: 10px;
+	 	margin-right: 40px;
 	 }
 	 header li {
 	 	display: inline;
@@ -88,7 +100,6 @@
 		position: relative;
 		float: left;
 		background-size: 100% 100%;
-		margin-top: -100px;
 	 }
 	 .banner1 {
 	 	background-image: url("foto14.jpeg");
@@ -96,23 +107,84 @@
 	 .banner h1 {
 	 	width: 80%;
 	 	float: left;
-	 	margin-top: 200px;
+	 	margin-top: 220px;
 	 	margin-left: 10%;
 	 	color: #796465;
 	 	font-size: 48px;
 	 	text-align: center;
-	 	font-family: helvetica;
+	 	font-family: $font-links;
 	 	text-shadow: 2px 2px #000;
 	 }
 	 .banner p {
 	 	font-size: 48px;
 		margin-bottom: 50px;
+		font-family: $font-links;
 	 }
 	 .banner2 {
 	 	background-image: url("foto13.jpeg");
 	 }
 	 .banner3 {
 	 	background-image: url("foto16.jpeg");
+	 }
+
+	 footer {
+	 	width: 100%;
+	 	height: 300px;
+	 	position: relative;
+	 	float: left;
+	 	background-color: $back-color;
+	 }
+
+	 .footer-section {
+	 	height: 300px;
+	 	transition: .5s !important;
+
+	 	h2 {
+	 		font-family: $font-links;
+	 		color: $header-color;
+	 		margin-top: 30px;
+	 		font-size: 42px;
+	 	}
+
+	 	li {
+	 		text-decoration: none;
+	 		list-style-type: none;
+	 		text-align: center;
+	 		font-family: $font-links;
+	 		color: $font-color;
+	 		transition: .5s;
+	 		font-size: 22px;
+	 		margin-bottom: 15px;
+	 	}
+	 	a {
+	 		transition: .5s;
+	 	}
+	 	.social-links {
+	 		text-align: center;
+	 		font-size: 36px;
+
+	 		h3 {
+	 			font-size: 22px;
+	 			font-family: $font-logo;
+	 			color: $font-color;
+	 			text-shadow: 1px 1px #000;
+	 		}
+
+	 		.row {
+	 			margin-bottom: 20px;
+	 		}
+
+	 		.fa-facebook {
+	 			float: right;
+	 		}
+	 		.fa-instagram {
+	 			float: left;
+	 		}
+
+	 		i {
+	 			color: #D7B29D;
+	 		}
+	 	}
 	 }
 }
 

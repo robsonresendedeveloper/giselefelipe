@@ -4,6 +4,7 @@
     <title>Gisele e Felipe</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -17,17 +18,28 @@
       </div>
       <div class="links links-left">
         <ul>
-          <a href="#"><li>HOME</li></a>
-          <a href="#"><li>FOTOS</li></a>
+          <%= link_to new_confirmation_path(anchor: 'PHOTOS') do %><li>FOTOS</li><% end %>
+          <%= link_to new_confirmation_path(anchor: 'INFORMATIONS') do %><li>INFORMAÇÕES</li><% end %>
+          <%= link_to new_confirmation_path(anchor: 'CONFIRMATION') do %><li>CONFIRME SUA PRESENÇA</li><% end %>
+
         </ul>
       </div>
-      <div class="logo" id="logo-header">
-        
-      </div>
+      <%= link_to root_path do %>
+        <div class="logo" id="logo-header">
+          <div class="logo-space">
+            <h1>G e F</h1>
+          </div>
+        </div>
+      <% end %>
       <div class="links links-right">
         <ul>
           <a href="https://www.querodecasamento.com.br/lista-de-casamento/giselefelipe/"><li>LISTA DE PRESENTES</li></a>
-          <a href="#"><li></li></a>
+          <% if logged_in? %>
+            <%= link_to confirmations_path do %><li>ÁREA DOS NOIVOS</li><% end %>
+            <%= link_to logout_path, method: :delete do %><li>SAIR</li><% end %>
+          <% else %>
+            <%= link_to login_path do %><li>ÁREA DOS NOIVOS</li><% end %>
+          <% end %>
         </ul>
       </div>
     </header>
@@ -37,18 +49,61 @@
       </div>
     <% end %>
 
-    <div class="banner banner1">
-      <h1><p>Ainda que eu falasse a língua</p> <p>dos homens e dos anjos ...</p></h1>
-    </div>
-
-    <div class="banner banner2">
-      <h1>Sem amor ...</h1>
-    </div>
-
-    <div class="banner banner3">  
-      <h1>Eu nada seria!</h1>
-    </div>
-
     <%= yield %>
+
+    <footer>
+      <div class="footer-container">
+        <div class=container>
+          <div class=row>
+            <div class="footer-section col-md-4">
+                <%= link_to root_path do %>
+                  <div class="logo-footer">
+                    <h1>G e F</h1>
+                  </div>
+                <% end %>
+            </div>
+            <div class=" footer-section col-md-4">
+              <h2>Links:</h2>
+              <ul>
+                <%= link_to root_path do %><li>FOTOS</li><% end %>
+                <a href="#"><li>INFORMAÇÕES</li></a>
+                <a href="#"><li>CONFIRME SUA PRESENÇA</li></a>
+                <a href="https://www.querodecasamento.com.br/lista-de-casamento/giselefelipe/"><li>LISTA DE PRESENTES</li></a>
+                <% if logged_in? %>
+                  <%= link_to confirmations_path do %><li>ÁREA DOS NOIVOS</li><% end %>
+                  <%= link_to logout_path, method: :delete do %><li>SAIR</li><% end %>
+                <% else %>
+                  <%= link_to login_path do %><li>ÁREA DOS NOIVOS</li><% end %>
+                <% end %>
+              </ul>
+            </div>
+            <div class="footer-section col-md-4">
+              <h2>Redes Sociais:</h2>
+                <div class="conatiner social-links">
+                  <h3>Gisele:</h3><br>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <a href=""><i class="fab fa-facebook"></i></a>
+                    </div>
+                    <div class="col-md-6">
+                      <a href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                  </div>
+
+                  <h3>Felipe:</h3>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <a href=""><i class="fab fa-facebook"></i></a>
+                    </div>
+                    <div class="col-md-6">
+                      <a href=""><i class="fab fa-instagram"></i></a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

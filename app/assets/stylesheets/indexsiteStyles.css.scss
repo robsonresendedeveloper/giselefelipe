@@ -1,0 +1,161 @@
+$photos-back-color: #796465;
+
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script|Jim+Nightshade|Open+Sans+Condensed:300|Poppins&display=swap');
+$font-text: 'Open Sans Condensed', sans-serif;
+$font-color: #E8D2AE;
+$informations-color: #DDE8B9;
+$infos-title-color: #796465;
+$infos-section-color: #D7B29D;
+
+@media only screen and (min-width: 992px) {
+
+	.photos {
+		width: 100%;
+		height: auto;
+		position: relative;
+		float: left;
+		background-color: $photos-back-color;
+
+		img {
+			width: 100%;
+			position: relative;
+			float: left;
+		}
+
+		.text {
+			width: 40%;
+			position: relative;
+			float: left;
+		}
+		.left-text {
+			clear: both;
+		}
+
+		h4 {
+			width: 52%;
+			position: relative;
+			float: left;
+			left: 24%;
+			margin-top: 65%;
+			transform: translate(0%, -50%);
+			text-align: center;
+			font-family: $font-text;
+			color: $font-color;
+			font-size: 32px;
+			text-shadow: 1px 1px #000; 
+		}
+
+		.final-photo {
+			width: 100%;
+			position: relative;
+			float: left;
+
+			img {
+				width: 100%;
+			}
+			h4 {
+				position: absolute;
+				font-size: 48px;
+				margin-top: 600px;
+			}
+		}
+
+	}
+
+	.informations {
+		width: 100%;
+		position: relative;
+		float: left;
+		background-color: $informations-color;
+		padding-bottom: 100px;
+
+
+		h1 {
+			text-align: center;
+			font-family: $font-text;
+			font-size: 64px;
+			margin-top: 50px;
+			color: $infos-title-color;
+			text-shadow: 1px 1px #000;
+		}
+
+		h2, h3, h4 {
+			text-align: center;
+			font-family: $font-text;
+			text-shadow: 1px 1px #000;
+		}
+
+		h2 {
+			font-size: 52px;
+			margin-top: 50px;
+			color: #CB8589;
+		}
+
+		h3, h4 {
+			margin-top: 46px;
+			color: $infos-title-color;
+		}
+
+		h4 {
+			font-size: 52px;
+			transition: .5s;
+			:hover {
+				opacity: .5;
+			}
+		}
+	}
+
+	.confirmation {
+		width: 100%;
+		position: relative;
+		float: left;
+		background-color: $font-color;
+		padding-top: 100px;
+		padding-bottom: 100px;
+
+		h1 {
+			text-align: center;
+			font-family: $font-text;
+			text-shadow: 1px 1px #000;
+			color: $infos-title-color;
+			font-size: 64px;
+		}
+
+		label {
+			text-align: center;
+			margin-top: 50px;
+			font-family: $font-text;
+			font-size: 24px;
+			color: $infos-title-color;
+		}
+		input {
+			width: 30%;
+			height: 40px;
+			margin-left: 35%;
+			position: relative;
+			float: left;
+			border-radius: 5px;
+			border: none;
+		}
+		#btn-submit {
+			margin-top: 50px;
+			height: 80px;
+			background-color: $informations-color;
+			border: 1px solid $infos-title-color;
+			color: $infos-title-color;
+			font-size: 18px;
+			transition: .5s;
+		}
+
+		#btn-submit:hover {
+			background-color: #CB8589;
+			color: #fff;
+		}
+	}	
+
+}
+
+
+
+
+

@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script|Jim+Nightshade|Open+Sans+Condensed:300|Poppins&display=swap');
+
+$back-color: #796465;
+$hover-color: #E8D2AE;
+$font-color: #E8D2AE;
+$shadow-color: #000;
+$font-logo: 'Dancing Script', cursive;
+
+.logo-space {
+	width: 130px;
+	height: 130px;
+	position: fixed;
+	float: left;
+	left: 50%;
+	background-color: $back-color;
+	transform: translate(-50%, -50%);
+	border-radius: 50%;
+	transition: .5s;
+
+	h1 {
+		text-align: center;
+		margin-top: 36px;
+		color: $font-color;
+		text-shadow: 1px 1px $shadow-color;
+		font-family: $font-logo;
+		font-size: 42px;
+	}
+}
+.logo-space:hover {
+	background-color: $hover-color;
+	cursor:pointer;
+	h1 {
+		color: $back-color;
+	}
+}
+
+.logo-footer {
+	width: 130px;
+	height: 130px;
+	position: relative;
+	float: left;
+	margin-top: 85px;
+	left: 50%;
+	background-color: $font-color;
+	transform: translate(-50%, 0%);
+	border-radius: 50%;
+	transition: .5s;
+
+	h1 {
+		text-align: center;
+		margin-top: 50%;
+		transform: translate(0%, -50%);
+		color: $back-color;
+		text-shadow: 1px 1px $shadow-color;
+		font-family: $font-logo;
+		font-size: 42px;
+	}
+}
+.logo-footer:hover {
+	background-color: $back-color;
+	cursor:pointer;
+	h1 {
+		color: $font-color;
+	}
+}

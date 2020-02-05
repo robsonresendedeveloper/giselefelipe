@@ -12,21 +12,21 @@
   <% end %>
 
   <div class="field">
-    <label>Digite seu nome completo:</label>
+    <label>Digite seu nome completo:</label><br>
     <%= form.text_field :name %>
   </div>
-
+  <br>
   <div class="field">
-    <label>Digite a quantidade de pessoas que vão ao casamento <br>(incluindo você):</label>
+    <label>Digite a quantidade de pessoas que vão ao casamento <br><br>(incluindo você):</label><br>
     <%= form.text_field :quantity %>
   </div>
-
+  <br>
   <div class="field">
-    <label>Digite o seu telefone <br>(se você quiser, é claro):</label>
+    <label>Digite o seu telefone <br><br>(se você quiser, é claro):</label><br>
     <%= form.text_field :phone %>
   </div>
-
+  <br>
   <div class="actions">
-    <%= form.submit "Confirmar presença"%>
+    <%= form.submit "Confirmar presença", id: "btn-submit" %>
   </div>
 <% end %>
