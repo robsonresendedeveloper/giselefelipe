@@ -2,8 +2,94 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.confirmation {
+$photos-back-color: #796465;
+
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script|Jim+Nightshade|Open+Sans+Condensed:300|Poppins&display=swap');
+$font-text: 'Open Sans Condensed', sans-serif;
+$font-color: #E8D2AE;
+$informations-color: #DDE8B9;
+$infos-title-color: #796465;
+$infos-section-color: #D7B29D;
+
+
+.confirmation, .confirmations-index {
 	position: relative;
 	float: left;
 	clear: both;
 }
+
+.show-confirmation, .confirmations-index {
+	width: 100%;
+	position: relative;
+	float: left;
+	padding-top: 250px;
+	padding-bottom: 100px;
+	background-color: $font-color;
+
+	p {
+		text-align: center;
+		font-family: $font-text;
+		font-size: 36px;
+		color: $infos-title-color;
+		text-shadow: 1px 1px #000;
+
+	}
+
+	h5 {
+		text-align: center;
+		font-size: 18px;
+		margin-top: 50px;
+	}
+}
+
+.show-confirmation a:hover {
+	background-color: $font-color !important;
+}
+
+.confirmations-index {
+
+	h1 {
+		text-align: center;
+		font-family: $font-text;
+	}
+
+	h2 {
+		width: 100%;
+		position: relative;
+		float: left;
+		text-align: center;
+		margin-top: 50px;
+		font-family: $font-text;
+	}
+
+	table {
+		width: 80%;
+		position: relative;
+		float: left;
+		left: 10%;
+		margin-top: 40px;
+		text-align: center;
+		border-color: $infos-title-color;
+		font-family: $font-text;
+	}
+
+	th {
+		font-size: 24px;
+		padding: 10px;
+	}
+	td {
+		font-size: 18px;
+		padding: 10px;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+

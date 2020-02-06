@@ -5,6 +5,7 @@ class ConfirmationsController < ApplicationController
   # GET /confirmations.json
   def index
     @confirmations = Confirmation.all
+    @total = Confirmation.sum("quantity")
   end
 
   # GET /confirmations/1
@@ -17,9 +18,6 @@ class ConfirmationsController < ApplicationController
     @confirmation = Confirmation.new
   end
 
-  # GET /confirmations/1/edit
-  def edit
-  end
 
   # POST /confirmations
   # POST /confirmations.json
@@ -28,24 +26,10 @@ class ConfirmationsController < ApplicationController
 
     respond_to do |format|
       if @confirmation.save
-        format.html { redirect_to @confirmation, notice: 'Confirmation was successfully created.' }
+        format.html { redirect_to @confirmation, notice: 'Obrigado por confirmar a sua presença!' }
         format.json { render :show, status: :created, location: @confirmation }
       else
         format.html { render :new }
-        format.json { render json: @confirmation.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  # PATCH/PUT /confirmations/1
-  # PATCH/PUT /confirmations/1.json
-  def update
-    respond_to do |format|
-      if @confirmation.update(confirmation_params)
-        format.html { redirect_to @confirmation, notice: 'Confirmation was successfully updated.' }
-        format.json { render :show, status: :ok, location: @confirmation }
-      else
-        format.html { render :edit }
         format.json { render json: @confirmation.errors, status: :unprocessable_entity }
       end
     end

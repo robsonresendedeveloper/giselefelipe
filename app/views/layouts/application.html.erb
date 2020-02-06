@@ -13,10 +13,23 @@
 
   <body>
     <header>
+
+      <div class="mobile-mask d-md-none d-xl-none d-lg-none">
+        
+      </div>
+      <div class="menu-mobile d-md-none d-xl-none d-lg-none">
+        <div class="logo" id="logo-header">
+          <div class="logo-space">
+            <h1>G e F</h1>
+          </div>
+        </div>
+      </div>
+
+
       <div class="header-container">
         
       </div>
-      <div class="links links-left">
+      <div class="links links-left d-none d-md-block d-lg-block d-xl-block">
         <ul>
           <a href="" class="photo-link"><li>FOTOS</li></a>
           <a href="" class="infos-link"><li>INFORMAÇÕES</li></a>
@@ -31,7 +44,7 @@
           </div>
         </div>
       <% end %>
-      <div class="links links-right">
+      <div class="links links-right d-none d-md-block d-lg-block d-xl-block">
         <ul>
           <a href="https://www.querodecasamento.com.br/lista-de-casamento/giselefelipe/"><li>LISTA DE PRESENTES</li></a>
           <% if logged_in? %>
@@ -42,12 +55,11 @@
           <% end %>
         </ul>
       </div>
-    </header>
-    <% flash.each do |name, msg| %>
-      <div class="notices">
-       <p><%= msg %></p> 
+
+      <div class="btn-menu-mobile d-md-none d-xl-none d-lg-none">
+        <i class="fa fa-bars"></i>
       </div>
-    <% end %>
+    </header>
 
     <%= yield %>
 

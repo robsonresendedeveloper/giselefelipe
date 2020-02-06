@@ -1,19 +1,27 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @confirmation.name %>
-</p>
+<div class="show-confirmation">
+	
+	<p id="notice"><%= notice %></p>
+	<br><br><br>
 
-<p>
-  <strong>Quantity:</strong>
-  <%= @confirmation.quantity %>
-</p>
+	<p>
+	  <strong>Nome:</strong>
+	  <%= @confirmation.name %>
+	</p>
+	<br>
+	<p>
+	  <strong>Quantidade de pessoas:</strong>
+	  <%= @confirmation.quantity %>
+	</p>
+	<br>
+	<p>
+	  <strong>Telefone:</strong>
+	  <%= @confirmation.phone %>
+	</p>
+	<br>
+	<h5>
+		<%= link_to 'Voltar', root_path() %>
+	</h5>
+	
 
-<p>
-  <strong>Phone:</strong>
-  <%= @confirmation.phone %>
-</p>
-
-<%= link_to 'Edit', edit_confirmation_path(@confirmation) %> |
-<%= link_to 'Back', confirmations_path %>
+</div>
