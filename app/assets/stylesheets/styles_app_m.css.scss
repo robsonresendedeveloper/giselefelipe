@@ -54,4 +54,17 @@ $font-logo: 'Dancing Script', cursive;
 			transform: translate(-150%, -50%);
 		}
 	}
+
+	.photos {
+		width: 100%;
+		height: auto;
+		position: relative;
+		float: left;
+
+		img {
+			width: 100%;
+			position: relative;
+			float: left;
+		}
+	}
 }

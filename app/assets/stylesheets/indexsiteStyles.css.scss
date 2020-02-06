@@ -16,6 +16,19 @@ $infos-section-color: #D7B29D;
 		float: left;
 		background-color: $photos-back-color;
 
+		.left-image {
+			position: relative;
+			float: left;
+			width: 65%;
+			clear: both;
+		}
+
+		.right-image {
+			position: relative;
+			float: left;
+			width: 65%;
+		}
+
 		img {
 			width: 100%;
 			position: relative;
@@ -23,7 +36,7 @@ $infos-section-color: #D7B29D;
 		}
 
 		.text {
-			width: 40%;
+			width: 35%;
 			position: relative;
 			float: left;
 		}
@@ -69,6 +82,10 @@ $infos-section-color: #D7B29D;
 		background-color: $informations-color;
 		padding-bottom: 100px;
 
+		.col-md-6 {
+			margin: 0 !important;
+			padding: 0 !important;
+		}
 
 		h1 {
 			text-align: center;
