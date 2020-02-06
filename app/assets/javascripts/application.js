@@ -81,5 +81,22 @@ $("document").ready(function(){
 		  }
 	  
 	});
+
+	$(".btn-menu-mobile").click(function(){
+		$("header .mobile-mask").css("left", "0%");
+		$("header .menu-mobile").css("left", "0%");
+		$("header #logo-menu-mobile").css("left", "50%");
+	});
+
+	$(".exit-mobile").click(function(){
+		$("header .mobile-mask").css("left", "-100%");
+		$("header .menu-mobile").css("left", "-100%");
+		$("header #logo-menu-mobile").css("left", "-50%");
+	});
+	$(".menu-mobile").click(function(){
+		$("header .mobile-mask").css("left", "-100%");
+		$("header .menu-mobile").css("left", "-100%");
+		$("header #logo-menu-mobile").css("left", "-50%");
+	});
 });
 

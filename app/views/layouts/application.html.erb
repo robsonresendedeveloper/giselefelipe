@@ -18,11 +18,25 @@
         
       </div>
       <div class="menu-mobile d-md-none d-xl-none d-lg-none">
-        <div class="logo" id="logo-header">
-          <div class="logo-space">
-            <h1>G e F</h1>
-          </div>
+
+        <div class="logo-space" id="logo-menu-mobile">
+          <h1>G e F</h1>
         </div>
+
+        <ul>
+          <a href="" class="photo-link"><li>FOTOS</li></a>
+          <a href="" class="infos-link"><li>INFORMAÇÕES</li></a>
+          <a href="" class="confirmation-link"><li>CONFIRME SUA PRESENÇA</li></a>
+          <a href="https://www.querodecasamento.com.br/lista-de-casamento/giselefelipe/"><li>LISTA DE PRESENTES</li></a>
+          <% if logged_in? %>
+            <%= link_to confirmations_path do %><li>ÁREA DOS NOIVOS</li><% end %>
+            <%= link_to logout_path, method: :delete do %><li>SAIR</li><% end %>
+          <% else %>
+            <%= link_to login_path do %><li>ÁREA DOS NOIVOS</li><% end %>
+          <% end %>
+
+          <li><div class="exit-mobile">X</div></li>
+        </ul>
       </div>
 
 
@@ -38,8 +52,8 @@
         </ul>
       </div>
       <%= link_to root_path do %>
-        <div class="logo" id="logo-header">
-          <div class="logo-space">
+        <div class="logo">
+          <div class="logo-space" id="logo-header">
             <h1>G e F</h1>
           </div>
         </div>
