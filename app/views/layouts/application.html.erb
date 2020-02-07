@@ -8,7 +8,17 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <script type="text/javascript">
+      if(screen.width > 751) {
+
+        document.write("<meta name=\"viewport\" content=\"width=device-width, initial-scale=0, maximum-scale=0\">");
+      }
+      else {
+        document.write("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1\">");
+      } 
+        
+
+    </script>
   </head>
 
   <body>
@@ -19,7 +29,7 @@
       </div>
       <div class="menu-mobile d-md-none d-xl-none d-lg-none">
 
-        <div class="logo-space" id="logo-menu-mobile">
+        <div class="logo-space d-md-none" id="logo-menu-mobile">
           <h1>G e F</h1>
         </div>
 

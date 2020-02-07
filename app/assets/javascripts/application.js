@@ -17,9 +17,11 @@
 //= require activestorage
 //= require_tree .
 
+
 $("document").ready(function(){
   $(".banner2").hide();
   $(".banner3").hide();
+
 
 	var img=1;
 	setInterval(function(){
