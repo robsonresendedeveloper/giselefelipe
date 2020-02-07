@@ -140,4 +140,45 @@ $infos-section-color: #D7B29D;
 
 	}
 
+	.confirmation {
+		input {
+			width: 70%;
+			margin-left: 15%;
+		}
+	}
+
+	.footer-section {
+		.col-md-6 {
+			width: 50%;
+		}
+	}
+
+	.login {
+
+		input {
+			width: 70%;
+			margin-left: 15%;
+		}
+	}
+	.confirmations-index {
+		table {
+			width: 100% !important;
+			position: relative;
+			float: left;
+			left: 0;
+
+			th {
+				width: 25% !important;
+				font-size: 18px !important;
+			}
+			td {
+				font-size: 12px;
+			}
+			#phone-number {
+				font-size: 9px;
+			}
+		}
+		
+	}
+
 }

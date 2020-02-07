@@ -200,6 +200,17 @@ $font-logo: 'Dancing Script', cursive;
 	 		}
 	 	}
 	 }
+
+	.credits {
+		width: 100%;
+		height: 20px;
+		position: relative;
+		float: left;
+		text-align: center;
+		background-color: $header-color;
+		color: #000;
+		font-family: $font-links;
+	}
 /*}*/
 
 

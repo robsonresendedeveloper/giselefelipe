@@ -19,7 +19,7 @@
           <tr>
             <td><%= confirmation.name %></td>
             <td><%= confirmation.quantity %></td>
-            <td><%= confirmation.phone %></td>
+            <td id="phone-number"><%= confirmation.phone %></td>
             <td><%= link_to 'Deletar', confirmation, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
           </tr>
         <% end %>

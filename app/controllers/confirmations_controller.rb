@@ -16,6 +16,7 @@ class ConfirmationsController < ApplicationController
   # GET /confirmations/new
   def new
     @confirmation = Confirmation.new
+    @teste = 77;
   end
 
 
