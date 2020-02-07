@@ -5,7 +5,7 @@ class ConfirmationsController < ApplicationController
   # GET /confirmations.json
   def index
     @confirmations = Confirmation.all
-    @total = Confirmation.sum("quantity")
+    #@total = Confirmation.sum("quantity")
   end
 
   # GET /confirmations/1
