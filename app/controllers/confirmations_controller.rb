@@ -16,7 +16,6 @@ class ConfirmationsController < ApplicationController
   # GET /confirmations/new
   def new
     @confirmation = Confirmation.new
-    @teste = 77;
   end
 
 
@@ -24,6 +23,8 @@ class ConfirmationsController < ApplicationController
   # POST /confirmations.json
   def create
     @confirmation = Confirmation.new(confirmation_params)
+    @quantity = @confirmation.quantity.to_i
+    @confirmation.quantity = @quantity
 
     respond_to do |format|
       if @confirmation.save
