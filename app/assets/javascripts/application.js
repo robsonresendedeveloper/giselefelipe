@@ -22,6 +22,7 @@ $("document").ready(function(){
   $(".banner2").hide();
   $(".banner3").hide();
 
+  	//alert($("#foto1").height());
 
 	var img=1;
 	setInterval(function(){
@@ -53,11 +54,11 @@ $("document").ready(function(){
     });
     $( ".infos-link" ).click(function(e) {
 		e.preventDefault();
-        $("html, body").animate({ scrollTop: "4867px" });
+        $("html, body").animate({ scrollTop: "4664px" });
     });
     $( ".confirmation-link" ).click(function(e) {
 		e.preventDefault();
-        $("html, body").animate({ scrollTop: "5408px" });
+        $("html, body").animate({ scrollTop: "5205px" });
     });
 
     $(window).scroll(function() {
