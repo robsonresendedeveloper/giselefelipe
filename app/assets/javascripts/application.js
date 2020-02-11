@@ -22,7 +22,12 @@ $("document").ready(function(){
   $(".banner2").hide();
   $(".banner3").hide();
 
+  	//alert($(window).width());
   	//alert($("#foto1").height());
+  	//alert($(".final-photo").height());
+
+
+  	var url = window.location.pathname;
 
 	var img=1;
 	setInterval(function(){
@@ -48,18 +53,55 @@ $("document").ready(function(){
 		}
 	}, 5000);
 
-	$( ".photo-link" ).click(function(e) {
-		e.preventDefault();
-        $("html, body").animate({ scrollTop: "640px" });
-    });
-    $( ".infos-link" ).click(function(e) {
-		e.preventDefault();
-        $("html, body").animate({ scrollTop: "4664px" });
-    });
-    $( ".confirmation-link" ).click(function(e) {
-		e.preventDefault();
-        $("html, body").animate({ scrollTop: "5205px" });
-    });
+	if (window.location.pathname == "/") {
+		if($(window).width() > 991) {
+			$( ".photo-link" ).click(function(e) {
+				e.preventDefault();
+		        $("html, body").animate({ scrollTop: "640px" });
+		    });
+		    $( ".infos-link" ).click(function(e) {
+				e.preventDefault();
+		        $("html, body").animate({ scrollTop: "4664px" });
+		    });
+		    $( ".confirmation-link" ).click(function(e) {
+				e.preventDefault();
+		        $("html, body").animate({ scrollTop: "5205px" });
+		    });
+		}
+
+		if($(window).width() > 767 && $(window).width() < 992) {
+			$( ".photo-link" ).click(function(e) {
+				e.preventDefault();
+		        $("html, body").animate({ scrollTop: "490px" });
+		    });
+		    $( ".infos-link" ).click(function(e) {
+				e.preventDefault();
+		        $("html, body").animate({ scrollTop: "5436px" });
+		    });
+		    $( ".confirmation-link" ).click(function(e) {
+				e.preventDefault();
+		        $("html, body").animate({ scrollTop: "5977px" });
+		    });
+		}
+
+		if($(window).width() < 768) {
+			$( ".photo-link" ).click(function(e) {
+				e.preventDefault();
+		        $("html, body").animate({ scrollTop: "490px" });
+		    });
+		    $( ".infos-link" ).click(function(e) {
+				e.preventDefault();
+		        $("html, body").animate({ scrollTop: "3528px" });
+		    });
+		    $( ".confirmation-link" ).click(function(e) {
+				e.preventDefault();
+		        $("html, body").animate({ scrollTop: "4348px" });
+		    });
+		}
+	}
+
+	
+	
 
     $(window).scroll(function() {
     	

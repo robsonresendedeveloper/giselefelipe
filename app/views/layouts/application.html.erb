@@ -26,9 +26,16 @@
         </div>
 
         <ul>
+          <% if current_page?(root_path) %>
           <a href="" class="photo-link"><li>FOTOS</li></a>
           <a href="" class="infos-link"><li>INFORMAÇÕES</li></a>
           <a href="" class="confirmation-link"><li>CONFIRME SUA PRESENÇA</li></a>
+          <% else %>
+            <%= link_to root_path, class: "photo-link" do%><li>FOTOS</li> <% end %>
+            <%= link_to root_path, class: "infos-link" do%><li>INFORMAÇÕES</li><% end %>
+            <%= link_to root_path, class: "confirmation-link" do%><li>CONFIRME SUA PRESENÇA</li><% end %>
+          <% end %>
+          
           <a href="https://www.querodecasamento.com.br/lista-de-casamento/giselefelipe/"><li>LISTA DE PRESENTES</li></a>
           <% if logged_in? %>
             <%= link_to confirmations_path do %><li>ÁREA DOS NOIVOS</li><% end %>
@@ -47,9 +54,15 @@
       </div>
       <div class="links links-left d-none d-md-block d-lg-block d-xl-block">
         <ul>
+          <% if current_page?(root_path) %>
           <a href="" class="photo-link"><li>FOTOS</li></a>
           <a href="" class="infos-link"><li>INFORMAÇÕES</li></a>
           <a href="" class="confirmation-link"><li>CONFIRME SUA PRESENÇA</li></a>
+          <% else %>
+            <%= link_to root_path, class: "photo-link" do%><li>FOTOS</li> <% end %>
+            <%= link_to root_path, class: "infos-link" do%><li>INFORMAÇÕES</li><% end %>
+            <%= link_to root_path, class: "confirmation-link" do%><li>CONFIRME SUA PRESENÇA</li><% end %>
+          <% end %>
 
         </ul>
       </div>
@@ -93,9 +106,15 @@
             <div class=" footer-section col-md-4">
               <h2>Links:</h2>
               <ul>
-                <a href="" class="photo-link"><li>FOTOS</li></a>
-                <a href="" class="infos-link"><li>INFORMAÇÕES</li></a>
-                <a href="" class="confirmation-link"><li>CONFIRME SUA PRESENÇA</li></a>
+                <% if current_page?(root_path) %>
+                  <a href="" class="photo-link"><li>FOTOS</li></a>
+                  <a href="" class="infos-link"><li>INFORMAÇÕES</li></a>
+                  <a href="" class="confirmation-link"><li>CONFIRME SUA PRESENÇA</li></a>
+                <% else %>
+                  <%= link_to root_path, class: "photo-link" do%><li>FOTOS</li> <% end %>
+                  <%= link_to root_path, class: "infos-link" do%><li>INFORMAÇÕES</li><% end %>
+                  <%= link_to root_path, class: "confirmation-link" do%><li>CONFIRME SUA PRESENÇA</li><% end %>
+                <% end %>
                 <a href="https://www.querodecasamento.com.br/lista-de-casamento/giselefelipe/"><li>LISTA DE PRESENTES</li></a>
                 <% if logged_in? %>
                   <%= link_to confirmations_path do %><li>ÁREA DOS NOIVOS</li><% end %>
@@ -111,20 +130,20 @@
                   <h3>Gisele:</h3><br>
                   <div class="row">
                     <div class="col-md-6">
-                      <a href=""><i class="fab fa-facebook"></i></a>
+                      <a href="https://pt-br.facebook.com/gisele.ladeira"><i class="fab fa-facebook"></i></a>
                     </div>
                     <div class="col-md-6">
-                      <a href=""><i class="fab fa-instagram"></i></a>
+                      <a href="https://www.instagram.com/ladeiragisele/"><i class="fab fa-instagram"></i></a>
                     </div>
                   </div>
 
                   <h3>Felipe:</h3>
                   <div class="row">
                     <div class="col-md-6">
-                      <a href=""><i class="fab fa-facebook"></i></a>
+                      <a href="https://m.facebook.com/fpaivadiniz"><i class="fab fa-facebook"></i></a>
                     </div>
                     <div class="col-md-6">
-                      <a href=""><i class="fab fa-instagram"></i></a>
+                      <a href="https://www.instagram.com/felipepaivadiniz/"><i class="fab fa-instagram"></i></a>
                     </div>
                   </div>
                 </div>
